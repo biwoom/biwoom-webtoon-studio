@@ -1,1 +1,11 @@
 .DS_Store
+
+# Local synthetic P0 runs and Python bytecode
+.studio-runs/
+__pycache__/
+*.py[cod]
+
+# Local outputs and generated agent audit logs
+/output/
+/.agents/logs/*
+!/.agents/logs/README.md
