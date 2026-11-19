@@ -1,0 +1,7 @@
+from biwoom_studio.models.p1 import GATES
+
+def bundle():
+    panels=[]
+    for i in range(1,11):
+        panels.append({'id':f'ST-999-EP01-P{i:03}','scene_id':'SC01','source_ids':['S1'],'source_refs':[{'source_id':'S1','locator':'section-1'}],'origin_type':'interpretive','characters':['C1'],'location_id':'L1','references':[], 'status':'draft','generate_without_text':True,'source_supported_beat':'synthetic beat','composition':'synthetic','action':'synthetic','emotion':'synthetic','camera':'wide','adaptation':{'staging':'synthetic','text':'adapted'},'dialogue':[],'captions':[]})
+    return {'project':{'project_id':'ST-999','language':'ko','format':'vertical_webtoon','rights_review':'pending','owner_approval_required':True,'approval_gates':{g:'pending' for g in GATES},'episodes':['EP01'],'art_style_id':'STYLE'},'sources':{'sources':[{'id':'S1','type':'research','title':'synthetic','language':'ko','edition':'test','locator':'section-1','url':'https://example.invalid','locators':['section-1'],'usage_rights':'unknown','text_reuse_allowed':False,'canonical_verified':False}]},'characters':{'characters':[{'id':'C1'}]},'locations':{'locations':[{'id':'L1'}]},'style':{'id':'STYLE','status':'draft','approved':False},'storyboard':{'episode_id':'EP01','status':'draft','scenes':[{'id':'SC01','panel_ids':[p['id'] for p in panels]}]},'panels':{'episode_id':'EP01','status':'draft','panels':panels,'script_revision':'sha256:test-script','style_revision':'sha256:test-style'},'actual_hashes':{'script':'sha256:test-script','style':'sha256:test-style'}}

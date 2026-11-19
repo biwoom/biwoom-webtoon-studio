@@ -20,3 +20,7 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m unittest discover -s tests -
 ```
 새 실행은 `output/mock-runs/` 내부 합성 자료만 생성하며 실제 작품은 입력받지 않는다. `qa-spike/`와 과거 `.studio-runs/` 산출물을 임의로 삭제·변경하지 않는다.
 검증 시 실제 종료 코드·테스트 수·파일 재읽기·Git diff 범위를 확인한다. 작업 결과와 미구현 사항은 context에 기록하고 비밀 없는 실행 증거는 `.agents/logs/`에 둔다. 앱 경로 검사를 운영체제 전체 접근 격리로 과장하지 않는다.
+
+## 제작 인계 보강
+대본 뒤·원화 전 실제 시각 콘티를 만들고 기존 G3 승인을 받는다. YAML만으로 대신하지 않는다. `docs/workflow.md`와 해당 작품의 로컬 감사/연속성 기록(있는 경우)을 함께 확인한다. 로컬 절차 `.agents/skills/production-handoff/SKILL.md`는 권한 부여나 자동 연동 완료를 뜻하지 않는다.
+G3.5는 정확한 이미지+대사 버전 조합의 인간 승인이고 G4는 회차 승인이다. 영향 컷만 재검토하며 이전 파일/승인 기록을 보존한다. 교학·미술 판단은 사용자에게 남긴다. status/preflight는 읽기 전용이고 차단 상태를 보여 줄 뿐 생성·릴리스를 허용하지 않는다. 파일럿 시험 종료 동의를 G4로 확대하지 않는다.
