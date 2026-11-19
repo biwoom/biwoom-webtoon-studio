@@ -1,6 +1,6 @@
 # Biwoom Webtoon Studio
 
-Local-first experimental tooling for a webtoon production workflow. The repository contains **synthetic fixtures and safety checks**, not a production-ready automatic studio or the private pilot artwork. Source, rights, artistic and doctrinal decisions remain human responsibilities.
+Local-first experimental tooling for a webtoon production workflow. The repository contains **synthetic fixtures and safety checks**, not a production-ready automatic studio. Explicitly approved artwork is kept separately under `published/illustrations/`; private pilot materials remain excluded. Source, rights, artistic and doctrinal decisions remain human responsibilities.
 
 ## Run locally
 Python 3.10+; verified on Python 3.13 with Pillow 12.2. Raster/composition tests require the optional `raster` dependency declared in pyproject.toml. No command installs packages or calls an external service. The Korean demonstration additionally requires the existing macOS Apple SD Gothic Neo font. It is not distributed here; unavailable font/glyphs fail closed.
@@ -33,4 +33,4 @@ The optional local project `archive_reference` object has `path` (Studio-relativ
 
 Korean wrapping preserves space-delimited words and explicit newlines; an oversized word requires an explicit edit or wider balloon. Full typography, automatic visual/doctrinal review, live generation, production approval ingress, actual supervision integration and release orchestration are unimplemented. The SQLite receipt store is tested separately from later file outputs; the entire composition/export sequence is not one crash-atomic transaction. Path validation is an application check, not OS sandboxing.
 
-Private story drafts, art, archives, local logs, credentials and workstation histories are not public inputs. `output/` is ignored; Git push/publication needs separate owner authorization. See `docs/workflow.md` and the versioned design for intended gates and future scope.
+Private story drafts, unapproved art, archives, local logs, credentials and workstation histories are not public inputs. `output/` is ignored; Git push/publication needs separate owner authorization. See `docs/workflow.md` and the versioned design for intended gates and future scope.
